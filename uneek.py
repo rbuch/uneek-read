@@ -20,4 +20,3 @@ for index in range(1, len(sys.argv)):
                 genes.add(value)
             elif value not in genes:
                 sys.stdout.write(line)
-        
