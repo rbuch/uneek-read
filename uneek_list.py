@@ -9,11 +9,11 @@ def inList(genes, value):
     return counter < len(genes) and genes[counter] == value
 
 def parseLine(line):
-    first, _ = line.split(None, 1)
+    first, second, _ = line.split(None, 2)
     first = first[14:].split('#')[0].split(':')
     first[2] = first[2].zfill(6)
 
-    return int(''.join(first))
+    return int(''.join(first) + second.zfill(3))
 
 if len(sys.argv) < 3:
     print "You must supply at least two file names: ./uneek.py file1 file2 ..."
